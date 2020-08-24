@@ -36,6 +36,7 @@
                     </#if>
                 </#if>
             </div>
+             <p class="has-text-grey is-size-7 is-block is-uppercase">阅读量:${post.visits!}</p>
         </div>
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             <#if index>
