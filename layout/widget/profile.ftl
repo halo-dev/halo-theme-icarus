@@ -27,7 +27,7 @@
                     <p class="heading">
                         文章
                     </p>
-                    <p class="title has-text-weight-normal">
+                    <p class="title has-text-weight-normal" target="_blank" href="${archives_url!}">
                         <@postTag method="count">${count}</@postTag>
                     </p>
                 </div>
@@ -37,7 +37,7 @@
                     <p class="heading">
                         分类
                     </p>
-                    <p class="title has-text-weight-normal">
+                    <p class="title has-text-weight-normal"  target="_blank" href="${categories_url!}">
                         <@categoryTag method="count">${count}</@categoryTag>
                     </p>
                 </div>
@@ -47,15 +47,19 @@
                     <p class="heading">
                         标签
                     </p>
-                    <p class="title has-text-weight-normal">
+                    <p class="title has-text-weight-normal" target="_blank" href="${tags_url!}">
                         <@tagTag method="count">${count}</@tagTag>
                     </p>
                 </div>
             </div>
         </nav>
-        <div class="level">
+       
+        <#if settings.profile_follow_url?? && settings.profile_follow_url!=''>
+         <div class="level">
             <a class="level-item button is-link is-rounded" href="${settings.profile_follow_url!'${blog_url!}'}" target="_blank">关注我</a>
-        </div>
+             </div>
+         </#if>
+       
         <div class="level is-mobile">
             <#if settings.social_github?? && settings.social_github!=''>
                 <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/${settings.social_github}">
