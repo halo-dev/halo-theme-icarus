@@ -27,7 +27,7 @@
                     <p class="heading">
                         文章
                     </p>
-                    <p class="title has-text-weight-normal" target="_blank" href="${archives_url!}">
+                    <p class="title has-link-black-ter has-text-weight-normal" target="_blank" href="${archives_url!}">
                         <@postTag method="count">${count}</@postTag>
                     </p>
                 </div>
@@ -37,7 +37,7 @@
                     <p class="heading">
                         分类
                     </p>
-                    <p class="title has-text-weight-normal"  target="_blank" href="${categories_url!}">
+                    <p class="title has-link-black-ter has-text-weight-normal"  target="_blank" href="${categories_url!}">
                         <@categoryTag method="count">${count}</@categoryTag>
                     </p>
                 </div>
@@ -47,7 +47,7 @@
                     <p class="heading">
                         标签
                     </p>
-                    <p class="title has-text-weight-normal" target="_blank" href="${tags_url!}">
+                    <p class="title has-link-black-ter has-text-weight-normal" target="_blank" href="${tags_url!}">
                         <@tagTag method="count">${count}</@tagTag>
                     </p>
                 </div>
