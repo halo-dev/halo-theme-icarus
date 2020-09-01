@@ -76,11 +76,19 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-                    <#nested />
-                </div>
+				 <#if post??>
+                  <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main">
+                      <#nested />
+                  </div>
+            	<#else>
+                  <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                      <#nested />
+                  </div>
+           		</#if>
                 <@widget 'left' />
-                <@widget 'right' />
+               	<#if !post??>
+                	<@widget 'right' />
+                </#if>
             </div>
         </div>
     </section>

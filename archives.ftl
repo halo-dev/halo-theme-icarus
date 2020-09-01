@@ -21,6 +21,7 @@
                             <div class="content">
                                 <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="${post.createTime!}">${post.createTime?string('yyyy-MM-dd')}</time>
                                 <a href="${post.fullPath!}" class="title has-link-black-ter is-size-6 has-text-weight-normal">${post.title!}</a>
+                                <p class="has-text-grey is-size-7 is-block is-uppercase">阅读量:${post.visits!}</p>
                             </div>
                         </div>
                     </article>
